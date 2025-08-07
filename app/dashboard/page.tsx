@@ -17,7 +17,7 @@ export default function Dashboard() {
       return;
     }
 
-    const userRole = (session.user as any)?.role;
+    const userRole = session.user?.role;
     if (!userRole || (userRole !== 'user' && userRole !== 'admin')) {
       router.push('/auth/signin');
     }
@@ -31,7 +31,7 @@ export default function Dashboard() {
     return null;
   }
 
-  const userRole = (session.user as any)?.role;
+  const userRole = session.user?.role;
 
   return (
     <div className="min-h-screen bg-background text-foreground p-8">

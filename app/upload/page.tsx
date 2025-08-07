@@ -13,7 +13,7 @@ export default function UploadPage() {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-semibold mb-4">Upload Image File</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Select an image file to upload. You'll see a preview before uploading.
+            Select an image file to upload. You&apos;ll see a preview before uploading.
             Maximum file size: 5MB.
           </p>
           

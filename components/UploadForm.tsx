@@ -6,7 +6,15 @@ export default function UploadForm() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string>('');
   const [uploading, setUploading] = useState(false);
-  const [uploadResult, setUploadResult] = useState<any>(null);
+  const [uploadResult, setUploadResult] = useState<{
+    message: string;
+    file: {
+      name: string;
+      size: number;
+      type: string;
+      uploadedAt: string;
+    };
+  } | null>(null);
   const [error, setError] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -119,6 +127,7 @@ export default function UploadForm() {
             {preview && (
               <div>
                 <h3 className="font-medium mb-2">Preview:</h3>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={preview}
                   alt="Preview"

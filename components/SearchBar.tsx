@@ -93,6 +93,7 @@ export default function SearchBar() {
             >
               <div className="flex items-center space-x-3">
                 {result.thumbnail && (
+                  /* eslint-disable-next-line @next/next/no-img-element */
                   <img
                     src={result.thumbnail}
                     alt={result.title}

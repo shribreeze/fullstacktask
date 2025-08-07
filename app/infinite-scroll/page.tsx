@@ -44,7 +44,7 @@ export default function InfiniteScrollPage() {
 
   useEffect(() => {
     fetchProducts(0);
-  }, []);
+  }, [fetchProducts]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -74,6 +74,7 @@ export default function InfiniteScrollPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
             <div key={product.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 border border-gray-200 dark:border-gray-700">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={product.thumbnail}
                 alt={product.title}

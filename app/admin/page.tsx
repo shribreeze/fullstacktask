@@ -17,7 +17,7 @@ export default function AdminPanel() {
       return;
     }
 
-    const userRole = (session.user as any)?.role;
+    const userRole = session.user?.role;
     if (userRole !== 'admin') {
       router.push('/dashboard');
     }
@@ -27,7 +27,7 @@ export default function AdminPanel() {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
   }
 
-  if (!session || (session.user as any)?.role !== 'admin') {
+  if (!session || session.user?.role !== 'admin') {
     return null;
   }
 
@@ -65,7 +65,7 @@ export default function AdminPanel() {
               <div className="space-y-2">
                 <p><strong>Name:</strong> {session.user?.name}</p>
                 <p><strong>Email:</strong> {session.user?.email}</p>
-                <p><strong>Role:</strong> {(session.user as any)?.role}</p>
+                <p><strong>Role:</strong> {session.user?.role}</p>
               </div>
             </div>
 
