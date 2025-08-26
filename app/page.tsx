@@ -9,6 +9,8 @@ export default function Home() {
     { title: 'Infinite Scroll', href: '/infinite-scroll', description: 'Infinite scrolling product list' },
     { title: 'Toast Demo', href: '/toast-demo', description: 'Custom toast notification system' },
     { title: 'File Upload', href: '/upload', description: 'Image upload with preview' },
+    { title: 'Rate Limiting', href: '/rate-limit', description: 'API rate limiting without libraries' },
+    { title: 'Comments', href: '/comments', description: 'Nested comment section with replies' },
   ];
 
   return (
